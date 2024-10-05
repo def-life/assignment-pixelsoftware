@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="font-montserrat">
+    <div id="app"></div>
+
+    <!-- navbar component -->
+    <nav class="bg-white container mx-auto py-4 shadow-md px-4 sm:px-0">
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="text-xl font-bold">Logo</div>
+    
+        <!-- Hamburger Icon for Mobile -->
+        <div class="flex md:hidden">
+          <button id="menu-toggle" class="focus:outline-none">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+    
+        <!-- Navbar Links -->
+        <ul id="navbar" class="hidden md:flex space-x-6">
+          <li>
+            <a href="#" class="text-black hover:text-gray-700 text-[15px]">Features</a>
+          </li>
+          <li>
+            <a href="#" class="text-black hover:text-gray-700 text-[15px]">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="text-black hover:text-gray-700 text-[15px]">Community</a>
+          </li>
+          <li>
+            <a href="#" class="text-black hover:text-gray-700 text-[15px]">Support</a>
+          </li>
+        </ul>
+    
+        <!-- Buttons -->
+        <div class="flex space-x-4 gap-1  sm:gap-3">
+          <a href="#" class="text-blue-500 hover:text-blue-400 border-2  border-blue-500 px-4 py-2 sm:py-2 sm:px-9 rounded-md">Login</a>
+          <a href="#" class="bg-blue-500 text-white px-4 py-2 sm:py-2 sm:px-9 rounded-md">Register</a>
+        </div>
+      </div>
+    
+      <!-- Mobile Navbar -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <ul class="flex flex-col space-y-4 py-4">
+          <li>
+            <a href="#" class="text-black hover:text-gray-700 text-[15px]">Features</a>
+          </li>
+          <li>
+            <a href="#" class="text-black hover:text-gray-700 text-[15px]">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="text-black hover:text-gray-700 text-[15px]">Community</a>
+          </li>
+          <li>
+            <a href="#" class="text-black hover:text-gray-700 text-[15px]">Support</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero component -->
+    <section
+      class="relative bg-cover bg-center"
+      style="background-image: url('./assets/random_image.jpeg'); height: 500px"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      <!-- Overlay for better readability -->
+      <div class="absolute w-full mx-auto text-center text-white z-10 bottom-10 md:bottom-24">
+        <h1 class="text-3xl sm:text-5xl md:text-[56px] leading-relaxed font-normal">
+          The largest community of photo enthusiasts
+        </h1>
+        <button
+          class="mt-8 bg-blue-500 text-white py-3 px-6 rounded-lg font-medium"
+        >
+          Join Today
+        </button>
+      </div>
+    </section>
+
+    <!-- feature component -->
+    <section class="py-16">
+      <div class="container mx-auto">
+        <!-- Main Heading -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <!-- First Column -->
+          <div class="bg-white p-6">
+            <h2 class="font-semibold text-4xl md:text-5xl leading-normal">
+              Snap photos and share like never before
+            </h2>
+          </div>
+          <!-- Second Column -->
+          <div></div>
+        </div>
+    
+        <!-- Content Blocks -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-4">
+          <!-- First Column -->
+          <div class="bg-white p-6">
+            <h4 class="text-2xl leading-9 font-bold mb-6">Sed ut perspiciatis</h4>
+            <p class="text-gray-600 mb-6 text-lg">
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt. Neque porro quisquam est.
+            </p>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-md text-[15px]">
+              Learn more
+            </button>
+          </div>
+    
+          <!-- Second Column -->
+          <div class="bg-white p-6">
+            <h4 class="text-2xl leading-9 font-bold mb-6">Lorem ipsum dolor</h4>
+            <p class="text-gray-600 mb-6 text-lg">
+              Amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi.
+            </p>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-md text-[15px]">
+              Learn more
+            </button>
+          </div>
+        </div>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center my-4">
+          <!-- First Column -->
+          <div class="bg-white p-6">
+            <h4 class="text-2xl leading-9 font-bold mb-6">Nemo enim ipsam</h4>
+            <p class="text-gray-600 mb-6 text-lg">
+              Consequuntur magni dolores eos qui ratione voluptatem sequi
+              nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+              sit amet, consectetur, adipisci velit, sed quia non numquam.
+            </p>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-md text-[15px]">
+              Learn more
+            </button>
+          </div>
+    
+          <!-- Second Column -->
+          <div class="bg-white p-6">
+            <h4 class="text-2xl leading-9 font-bold mb-6">Tempor incididunt</h4>
+            <p class="text-gray-600 mb-6 text-lg">
+              Eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+              velit, sed quia non numquam eius modi tempora.
+            </p>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded-md text-[15px]">
+              Learn more
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Separator Component -->
+    <div class="w-full h-32 bg-gray-200"></div>
+
+    <!-- Next section  -->
+    <div class="container mx-auto px-4 py-24">
+      <div class="bg-white p-8">
+        <h2 class="text-3xl md:text-5xl leading-normal font-semibold text-center mb-4">
+          Have you ever posted any photo on social media?
+        </h2>
+        <p class="text-black/80 text-xl md:text-4xl leading-snug text-center mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore
+        </p>
+        
+
+        <div class="flex flex-col md:flex-row items-center mt-20">
+          <div class="w-full md:w-1/2 pr-0 md:pr-8 mb-8 md:mb-0">
+            <div class="mb-6">
+              <h4 class="font-semibold text-2xl mb-2">Sed ut perspiciatis</h4>
+              <p class="text-black/80 text-lg">
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur.
+              </p>
+            </div>
+            <div class="mb-6">
+              <h4 class="font-semibold text-2xl mb-2">Lorem ipsum dolor</h4>
+              <p class="text-black/80 text-lg">
+                Amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-2xl mb-2">Nemo enim ipsam</h4>
+              <p class="text-black/80 text-lg">
+                Consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt. Neque porro quisquam est, qui dolorem.
+              </p>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2 relative">
+            <img
+              src="./assets/building.png"
+              alt="Skyscrapers"
+              class="rounded-lg shadow-md w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Separator Component -->
+    <div class="w-full h-32 bg-gray-200"></div>
+
+    <!-- Next one now  -->
+
+    <div class="container mx-auto px-4 py-24">
+      <h1 class="text-3xl md:text-5xl font-bold text-center md:mb-12">
+        Make your photos more stylish
+      </h1>
+      <p class="text-black/80 text-center md:text-4xl mx-auto mb-16">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+        <!-- Feature 1 -->
+        <div class="bg-white overflow-hidden border border-[#cccccc]">
+          <img
+            src="./assets/laptop.png"
+            alt="Laptop screen"
+            class="min-w-80 object-cover"
+          />
+          <div class="p-10">
+            <h3 class="font-semibold text-lg mb-8">Sed ut perspiciatis</h3>
+            <p class="text-gray-600 text-sm mb-6">
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-white overflow-hidden border border-[#cccccc]">
+          <img
+            src="/assets/graph.png"
+            alt="Business chart"
+            class="min-w-80 object-cover"
+          />
+          <div class="p-10">
+            <h3 class="font-semibold text-lg mb-8">Lorem ipsum dolor</h3>
+            <p class="text-gray-600 text-sm mb-6">
+              Amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-white overflow-hidden border border-[#cccccc]">
+          <img
+            src="/assets/hand.png"
+            alt="Handshake"
+            class="min-w-80 object-cover"
+          />
+          <div class="p-10">
+            <h3 class="font-semibold text-lg mb-8">Nemo enim ipsam</h3>
+            <p class="text-gray-600 text-sm mb-6">
+              Consequuntur magni dolores eos qui ratione voluptatem sequi
+              nesciunt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Separator Component -->
+    <div class="w-full h-32 bg-gray-200"></div>
+
+    <!-- form component -->
+    <div class="container mx-auto py-24">
+      <h2 class="text-3xl md:text-5xl font-semibold text-center leading-relaxed mb-6">
+        Ready to take a free trial?
+      </h2>
+      <p class="text-xl sm:text-3xl lg:text-4xl leading-relaxed text-center text-black/80 mx-auto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore
+      </p>
+    
+      <div class="max-w-[622px]  border border-black/50 px-8 py-8 md:px-14 md:py-16 mt-12 mx-3 sm:mx-auto">
+        <h4 class="text-xl md:text-2xl leading-9 text-black font-bold mb-8">
+          Sign up for a free account
+        </h4>
+    
+        <form>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-6">
+            <div>
+              <input
+                class="border border-[#C4C4C4] focus:outline-none focus:ring-2 focus:ring-blue-400 p-2 w-full"
+                type="text"
+                id="first-name"
+                placeholder="First name"
+              />
+            </div>
+            <div>
+              <input
+                class="border border-[#C4C4C4] focus:outline-none focus:ring-2 focus:ring-blue-400 p-2 w-full"
+                type="text"
+                id="last-name"
+                placeholder="Last name"
+              />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-6">
+            <div>
+              <input
+                class="border border-[#C4C4C4] focus:outline-none focus:ring-2 focus:ring-blue-400 p-2 w-full"
+                type="email"
+                id="email"
+                placeholder="Email address"
+              />
+            </div>
+            <div>
+              <input
+                class="border border-[#C4C4C4] focus:outline-none focus:ring-2 focus:ring-blue-400 p-2 w-full"
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+              />
+            </div>
+          </div>
+    
+          <div class="my-6">
+            <div>
+              <input
+                class="border border-[#C4C4C4] focus:outline-none focus:ring-2 focus:ring-blue-400 p-2 w-full"
+                type="password"
+                id="password"
+                placeholder="Create password"
+              />
+            </div>
+          </div>
+    
+          <button
+            type="submit"
+            class="bg-gradient-to-r from-blue-500 to-blue-400 text-white font-medium rounded-lg px-7 py-3 focus:outline-none focus:ring-4 focus:ring-blue-400 shadow-lg"
+          >
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-between items-center">
+          <div class="w-full md:w-1/4 mb-4 md:mb-0">
+            <h2 class="text-2xl font-bold">Logo</h2>
+          </div>
+          <div class="w-full md:w-2/3 flex flex-wrap justify-between">
+            <div class="w-1/3 mb-4">
+              <h3 class="font-semibold mb-2">Mobile app</h3>
+              <ul class="text-sm">
+                <li>Features</li>
+                <li>Live share</li>
+                <li>Video record</li>
+              </ul>
+            </div>
+            <div class="w-1/3 mb-4">
+              <h3 class="font-semibold mb-2">Community</h3>
+              <ul class="text-sm">
+                <li>Featured artists</li>
+                <li>The Portal</li>
+                <li>Live events</li>
+              </ul>
+            </div>
+            <div class="w-1/3 mb-4">
+              <h3 class="font-semibold mb-2">Company</h3>
+              <ul class="text-sm">
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>History</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap justify-between items-center mt-8 pt-8 border-t border-gray-700"
+        >
+          <div class="w-full md:w-1/2 mb-4 md:mb-0 text-sm">
+            © Photo, Inc. 2024. We love our users!
+          </div>
+          <div class="w-full md:w-1/2 flex justify-between items-center">
+            <div class="flex space-x-4">
+              <span class="text-sm">Follow us:</span>
+              <a href="#" class="text-white hover:text-gray-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M22.675 0H1.325C.594 0 0 .593 0 1.326v21.348C0 23.406.593 24 1.326 24H12.82v-9.294H9.692v-3.622h3.128V8.414c0-3.1 1.893-4.79 4.657-4.79 1.324 0 2.462.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.714-1.795 1.76v2.31h3.59l-.467 3.622h-3.123V24h6.116C23.407 24 24 23.406 24 22.674V1.326C24 .593 23.406 0 22.675 0z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" class="text-white hover:text-gray-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M23.954 4.569c-.885.392-1.83.656-2.825.775 1.014-.608 1.794-1.569 2.163-2.723-.951.564-2.005.974-3.127 1.195-.896-.957-2.173-1.555-3.591-1.555-2.717 0-4.92 2.203-4.92 4.917 0 .385.045.762.126 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.423.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.025-1.566-.248-2.229-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.624-.03-.924-.086.631 1.956 2.445 3.379 4.6 3.419-1.68 1.319-3.809 2.107-6.102 2.107-.396 0-.788-.023-1.176-.068 2.179 1.398 4.768 2.212 7.557 2.212 9.054 0 14.001-7.496 14.001-13.986 0-.21 0-.423-.016-.635.962-.694 1.8-1.562 2.46-2.549z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" class="text-white hover:text-gray-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6"
+                >
+                  <path
+                    d="M22.23 0H1.77C.79 0 0 .774 0 1.73v20.538C0 23.226.79 24 1.77 24H22.23c.978 0 1.77-.774 1.77-1.73V1.73C24 .774 23.208 0 22.23 0zM7.094 20.452H3.66V9.359h3.434v11.093zM5.377 7.897a1.998 1.998 0 1 1 0-3.995 1.998 1.998 0 0 1 0 3.995zM20.452 20.452h-3.433v-5.41c0-1.287-.025-2.944-1.792-2.944-1.79 0-2.065 1.4-2.065 2.848v5.506h-3.434V9.359h3.298v1.517h.047c.46-.872 1.585-1.79 3.263-1.79 3.487 0 4.128 2.295 4.128 5.277v6.089z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
